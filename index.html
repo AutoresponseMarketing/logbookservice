@@ -938,6 +938,26 @@
   }
 </style>
 </head>
+    
+  .footer-bottom {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 0.9em;
+    color: #777;
+    border-top: 1px solid #444;
+    padding-top: 20px;
+  }
+</style>
+</head>
+    
+<body>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+<a href="index.html" class="logo">
+  <img src="logo.png" alt="Auto Response Logo" class="site-logo" />
+</a>
+            <ul class="nav-
 <body>
     <!-- Navbar -->
     <nav class="navbar">
@@ -962,18 +982,42 @@
             <p>Protect your warranty, maintain peak performance, and get back on the road faster — all with a trusted local mechanic.</p>
             <a href="#book" class="hero-cta">Book Your Service Now</a>
             
-<div class="video-demo" style="max-width: 600px; margin: 3rem auto;">
-  <iframe
-    width="100%"
-    height="340"
-    src="https://www.youtube.com/embed/DzLBALdJzgU?modestbranding=1&rel=0"
-    title="Live YouTube Video"
-    frameborder="0"
-    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-    allowfullscreen
-    style="border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3);"
-  ></iframe>
+<div class="video-demo" style="max-width: 600px; margin: 3rem auto; cursor: pointer; position: relative;">
+  <img
+    src="https://img.youtube.com/vi/DzLBALdJzgU/maxresdefault.jpg"
+    alt="Live Stream Thumbnail"
+    style="width: 100%; border-radius: 10px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); display: block;"
+    id="live-thumb"
+  />
+  <div
+    style="
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80px;
+      height: 80px;
+      background: rgba(249, 115, 22, 0.8);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 0 20px rgba(249, 115, 22, 0.7);
+    "
+    id="play-button"
+  >
+    <svg
+      width="30"
+      height="30"
+      viewBox="0 0 24 24"
+      fill="white"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M8 5v14l11-7z" />
+    </svg>
+  </div>
 </div>
+
         </div>
     </section>
 
