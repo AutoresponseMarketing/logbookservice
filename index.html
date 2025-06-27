@@ -5,6 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Certified Logbook Servicing - Auto Response</title>
     <style>
+        <head>
+  <style>
+    /* Other CSS styles here */
+
+    .hero {
+      position: relative; /* make sure hero is positioned for absolute inside */
+      overflow: visible;  /* allow overflow if needed */
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 5%; /* adjust to move image left or right */
+      transform: translateY(-50%);
+      width: 300px;  /* adjust size as needed */
+      height: 300px; /* adjust size as needed */
+      background: url('images/chad.png') no-repeat center center;
+      background-size: contain;
+      opacity: 0.15; /* subtle transparency */
+      pointer-events: none; /* makes sure clicks pass through */
+      z-index: 0; /* behind the hero content */
+    }
+  </style>
+</head>
+
         * {
             margin: 0;
             padding: 0;
