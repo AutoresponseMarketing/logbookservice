@@ -10,6 +10,18 @@
             padding: 0;
             box-sizing: border-box;
         }
+        .hero-mobile {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  .hero-desktop {
+    display: none;
+  }
+  .hero-mobile {
+    display: block;
+  }
+}
 html {
   scroll-behavior: smooth;
 }
@@ -982,11 +994,25 @@ html {
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-container">
-    <h1>Stay Road Ready With Certified Logbook Servicing — Without Dealer Prices.</h1>
-    <p>Protect your warranty, maintain peak performance, and get back on the road faster — all with a trusted local mechanic.</p>
+
+    <!-- Desktop Headline + Subheading -->
+    <div class="hero-text hero-desktop">
+      <h1>Stay Road Ready With Certified Logbook Servicing — Without Dealer Prices.</h1>
+      <p>Protect your warranty, maintain peak performance, and get back on the road faster — all with a trusted local mechanic.</p>
+    </div>
+
+    <!-- Mobile Headline + Subheading -->
+    <div class="hero-text hero-mobile">
+      <h1>Certified Logbook Servicing, No Dealer Prices</h1>
+      <p>Protect your warranty and skip dealer prices with local, certified servicing.</p>
+    </div>
+
     <a href="https://autoresponse.autobookingsonline.com.au/" target="_blank" class="hero-cta">
       Book Your Service Now
     </a>
+
+  </div>
+</section>
  <a href="tel:(08)92502266" class="hero-cta" style="background-color: #28a745;">
     📞 Call Auto Response
   </a>
