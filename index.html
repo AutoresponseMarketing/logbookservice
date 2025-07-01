@@ -976,6 +976,41 @@ html {
     border-top: 1px solid #444;
     padding-top: 20px;
   }
+    /* Hamburger hidden on desktop */
+.hamburger {
+  display: none;
+  font-size: 2rem;
+  color: #fff;
+  cursor: pointer;
+  z-index: 1001; /* above nav */
+}
+
+/* Mobile adjustments */
+@media (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: rgba(18, 18, 18, 0.95);
+    width: 100%;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .nav-links li {
+    margin: 0.5rem 0;
+  }
+}
 </style>
 </head>
 <body>
@@ -985,7 +1020,11 @@ html {
     <a href="index.html" class="logo">
       <img src="logo.png" alt="Auto Response Logo" class="site-logo" />
     </a>
-    <ul class="nav-links">
+
+    <!-- Hamburger icon -->
+    <div class="hamburger" id="hamburger">&#9776;</div>
+
+    <ul class="nav-links" id="nav-links">
       <li><a href="#services">Services</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
       <li><a href="#contact">Contact</a></li>
@@ -1234,3 +1273,11 @@ html {
   </div>
     <footer id="contact">
 </footer>
+    <script>
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+
+  hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+</script>
